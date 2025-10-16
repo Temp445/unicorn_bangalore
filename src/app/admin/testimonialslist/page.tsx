@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { Edit, Trash2 } from "lucide-react";
-import Sidebar from "@/components/Sidebar";
 
 interface Testimonial {
   _id: string;
@@ -52,7 +51,6 @@ const TestimonialList = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50 container mx-auto">
-      <Sidebar />
       <div className="flex-1 px-6 lg:px-16 py-12">
         <div className="flex flex-col sm:flex-row justify-center items-center mb-10 gap-4">
           <h1 className="text-3xl font-bold text-gray-800 text-center sm:text-left">

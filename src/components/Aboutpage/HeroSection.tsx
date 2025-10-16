@@ -6,7 +6,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-[#205057]">
-      <div className="container mx-auto px-2 md:px-6 h-fit py-10 lg:py-32 flex flex-col items-center justify-center text-center relative z-10">
+      <div className="container mx-auto px-2 md:px-6 h-fit py-10 lg:pb-32 flex flex-col items-center justify-center text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,11 +16,11 @@ const HeroSection = () => {
           <p className="uppercase tracking-widest text-white font-semibold text-sm">
             About Us
           </p>
-          <h1 className="mt-4 text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight text-white">
+          <h1 className="mt-4 text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-sans leading-tight text-white">
             Turning Business Challenges into{" "}
             <span className="underline  ">Growth</span> Opportunities
           </h1>
-          <p className="mt-6 text-sm text-justify lg:text-balance md:text-lg text-[#e5e5e5] leading-relaxed px-5">
+          <p className="mt-6 text-sm text-justify lg:text-center md:text-lg text-[#e5e5e5] leading-relaxed px-5">
             <span className="font-bold">
               Unicorn (Bangalore) Private Limited
             </span>{" "}

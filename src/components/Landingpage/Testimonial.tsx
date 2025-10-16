@@ -37,7 +37,7 @@ const Testimonial = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[#071520]">
+          <h2 className="text-2xl md:text-4xl font-sans font-semibold text-[#071520]">
             What Our Customers Say
           </h2>
           <div className="w-24 h-1 bg-[#205057] mx-auto mt-4 rounded-full"></div>

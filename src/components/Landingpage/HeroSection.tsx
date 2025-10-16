@@ -15,20 +15,20 @@ const HeroSection = () => {
 
   return (
     <section className="relative pt-5 pb-14 lg:py-20 bg-[#205057] overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-14 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-8 md:gap-14 relative z-10">
         
         <motion.div
-          className="flex-1 text-center lg:text-left"
+          className="flex-1 text-center lg:text-left order-2 lg:order-1 "
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2  border rounded-full text-[#e5e5e5] text-sm font-medium mb-4">
+          <div className="lg:inline-flex items-center gap-2 px-4 py-2  border rounded-full text-[#e5e5e5] text-sm font-medium mb-4 hidden">
             <Zap className="w-4 h-4" />
             Precision Engineering
           </div>
 
-          <h1 className="text-2xl lg:text-3xl xl:text-5xl font-extrabold leading-tight text-white mb-4">
+          <h1 className="text-2xl lg:text-3xl xl:text-5xl font- font-sans leading-tight text-white mb-4">
             Engineered Parts for Automotive and Industry
           </h1>
 
@@ -67,7 +67,7 @@ const HeroSection = () => {
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 bg-[#e5e5e5] border text-[#071520] rounded-lg font-semibold hover:scale-105 transition"
+              className="px-6 py-3 bg-[#e5e5e5]  text-[#071520] rounded-lg font-semibold hover:scale-105 transition"
               aria-label="Contact Us"
             >
               Contact Us
@@ -76,7 +76,7 @@ const HeroSection = () => {
         </motion.div>
 
 
-  <motion.div className="flex-1 grid grid-cols-3 gap-5">
+  <motion.div className="flex-1 grid grid-cols-3 gap-2 md:gap-5 order-1">
   <motion.div className="col-span-2 row-span-2"
   initial={{ opacity: 0, y: -50 }}
   animate={{ opacity: 1, y: 0 }}

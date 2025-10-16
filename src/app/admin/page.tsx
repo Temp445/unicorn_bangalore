@@ -6,15 +6,11 @@ import { useRouter } from "next/navigation";
 import { Edit, Trash2 } from "lucide-react";
 import AdminProtectedRoute from "@/components/ProductedRoute";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
 
 interface Product {
   _id: string;
   productName: string;
-  productPath: string;
-  description?: string;
-  category?: string;
-  mainImage: string[];
+  productImage: string[];
 }
 
 export default function ProductList() {
@@ -56,7 +52,6 @@ export default function ProductList() {
   return (
     <AdminProtectedRoute>
       <div className="flex min-h-screen container mx-auto ">
-        <Sidebar />
         <div className="max-w-7xl mx-auto p-6 h-auto pb-20">
           <div className="pb-10  text-black">
             <h1 className="text-3xl font-extrabold mb-10 text-center tracking-wide">
@@ -73,7 +68,7 @@ export default function ProductList() {
             </div>
           </div>
           {loading ? (
-            <div className="flex justify-center items-center h-[40vh]">
+            <div className="flex justify-center items-center w-full h-[40vh]">
               <div className="w-16 h-16 border-4 border-[#205057] border-t-transparent border-b-transparent rounded-full animate-spin"></div>
             </div>
           ) : (
@@ -81,11 +76,11 @@ export default function ProductList() {
               {products.map((product) => (
                 <div
                   key={product._id}
-                  className="bg-white rounded-xl shadow-md overflow-hidden border flex flex-col"
+                  className="bg-white rounded shadow-md overflow-hidden border flex flex-col"
                 >
-                  {product.mainImage?.length > 0 && (
+                  {product.productImage?.length > 0 && (
                     <img
-                      src={product.mainImage[0]}
+                      src={product.productImage[0]}
                       alt={product.productName}
                       className="h-56 w-fit mx-auto object-contain"
                     />
@@ -95,19 +90,9 @@ export default function ProductList() {
                     <h2 className="text-xl font-semibold">
                       {product.productName}
                     </h2>
-                    <p className="text-gray-600 line-clamp-3">
-                      {product.description}
-                    </p>
 
-                    <div className="flex justify-between items-center mt-4 gap-2">
-                      <button
-                        onClick={() =>
-                          router.push(`/products/${product.productPath}`)
-                        }
-                        className="flex items-center gap-1 bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
-                      >
-                        View
-                      </button>
+                    <div className="flex justify-end items-center mt-4 gap-2">
+                    
 
                       <div className="flex rounded overflow-hidden">
                         <button

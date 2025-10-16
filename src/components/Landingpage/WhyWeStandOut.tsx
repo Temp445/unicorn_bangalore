@@ -39,7 +39,7 @@ const WhyWeStandOut = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2
-            className="text-2xl md:text-4xl font-black text-[#071520] mb-5 md:mb-8 leading-tight"
+            className="text-2xl md:text-4xl font-sans font-bold text-[#071520] mb-5 md:mb-8"
             variants={itemVariants}
           >
             Why We <span className="text-[#205057]">Stand Out</span>
@@ -76,7 +76,7 @@ const WhyWeStandOut = () => {
           </motion.div>
         </motion.div>
 
-        <div className="p-2 xl:p-16 relative overflow-hidden  rounded-lg mb-5 md:mb-20 lg:mb-0">
+        <div className="p-2 max-w-7xl mx-auto relative overflow-hidden  rounded-lg mb-5 md:mb-20 lg:mb-0">
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <motion.div
               className="w-full lg:w-1/2 flex-shrink-0 relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-500"
@@ -100,14 +100,14 @@ const WhyWeStandOut = () => {
               transition={{ duration: 0.8 }}
             >
               <div>
-                <h2 className="text-2xl md:text-4xl xl:text-4xl font-bold mb-3 text-[#071520]">
-                  Experience Excellence in{" "}
-                  <span className="text-[#205057]">Automotive Production</span>
+                <h2 className="text-2xl md:text-4xl font-sans mb-3 text-[#071520]">
+                  Experience Excellence in{" "} <br />
+                  <span className="text-[#205057] text-xl md:text-3xl">Automotive Production</span>
                 </h2>
                 <div className="w-32 h-1 rounded-full bg-[#071520]" />
               </div>
 
-              <p className="md:text-lg xl:text-lg leading-relaxed text-gray-700 font-medium bg-gray-50 p-4 rounded-lg text-justify shadow-sm">
+              <p className="md:text-lg xl:text-lg leading-relaxed text-gray-700 font-sans  text-justify">
                 Our manufacturing plants leverage cutting-edge technology and
                 automation to produce vehicles with unmatched precision,
                 efficiency, and safety standards. Each process is designed for
@@ -122,7 +122,7 @@ const WhyWeStandOut = () => {
                   <span className="px-3 py-1 text-[#205057] border rounded-full text-sm font-medium">
                     Quality Control
                   </span>
-                  <span className="px-3 py-1 text-[#205057] border rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 text-[#205057] border rounded-full hidden md:block text-sm font-medium">
                     Safety Standards
                   </span>
                 </div>

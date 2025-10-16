@@ -33,10 +33,10 @@ const MachineGallery = () => {
     <section className="py-5 xl:py-20">
       <div className="container mx-auto px-2 lg:px-5">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl  font-extrabold mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl  font-sans font-semibold mb-4">
             Our <span className="text-[#205057]">Advanced Machinery</span>
           </h2>
-          <p className="text-[#071520] md:text-lg max-w-2xl mx-auto">
+          <p className="text-[#071520] md:text-base max-w-2xl mx-auto">
             Explore our comprehensive collection of precision equipment designed
             for excellence
           </p>

@@ -32,14 +32,14 @@ const Founder = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+              <h3 className="text-2xl font-sans font-semibold text-slate-900 mb-2">
                 R. Rajagopalan
               </h3>
               <div className="inline-block bg-[#205057] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Chairman
               </div>
 
-              <p className="text-[#071520] leading-relaxed mb-6">
+              <p className="text-[#071520] font-sans leading-relaxed mb-6">
                 Chairman of Unicorn (Bangalore) Private Limited is a Diploma
                 Holder with over{" "}
                 <span className="font-bold text-[#205057]">
@@ -65,14 +65,14 @@ const Founder = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+              <h3 className="text-2xl font-semibold font-sans text-slate-900 mb-2">
                 S. Rajasekaran
               </h3>
               <div className="inline-block bg-[#205057] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Managing Director
               </div>
 
-              <p className="text-[#071520] leading-relaxed mb-6">
+              <p className="text-[#071520] font-sans leading-relaxed mb-6">
                 Managing Director of Unicorn (Bangalore) Private Limited is a
                 MBA Graduate with over{" "}
                 <span className="font-bold text-[#205057]">

@@ -28,10 +28,10 @@ const VisionSection = () => {
               key={section.title}
               className="bg-[#205057] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
             >
-              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-sans font-semibold text-white mb-4">
                 {section.title}
               </h2>
-              <p className="text-[#e5e5e5] md:text-lg leading-relaxed">{section.content}</p>
+              <p className="text-[#e5e5e5] font-extralight leading-relaxed">{section.content}</p>
             </div>
           ))}
         </div>

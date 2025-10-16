@@ -7,10 +7,10 @@ const CardSection = () => {
       <div className="rounded-3xl bg-[#205057] to-transparent p-8 md:p-12">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl md:text-3xl font-extrabold text-white">
-              High-Quality Auto Turned Parts & Components Maker
+            <h3 className="text-2xl md:text-4xl font-sans text-white">
+              High-Quality Auto Turned Parts <br /> & Components Maker
             </h3>
-            <p className="mt-3 text-[#e5e5e5] max-w-2xl">
+            <p className="mt-3 text-[#e5e5e5] max-w-xl font-sans">
               We build, design, and optimize high-precision auto components with
               unmatched quality. Partner with us to enhance your manufacturing
               efficiency.

@@ -21,8 +21,8 @@ const StorySection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-              Our story began with a{" "}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold  text-gray-900 leading-tight">
+              Our story began with a{" "} <br/>
               <span className="text-[#205057]">passion for precision</span>
             </h2>
 

@@ -1,24 +1,21 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { useEffect, useState } from "react";
-import { MoveRight } from "lucide-react";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
+import { X, ChevronLeft, ChevronRight, Phone, Mail } from "lucide-react";
 import Link from "next/link";
+
 interface Product {
   _id: string;
   productName: string;
-  productPath: string;
-  description?: string;
-  category?: string;
-  mainImage: string[];
+  productImage: string[];
 }
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [currentProductIndex, setCurrentProductIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -26,12 +23,7 @@ const ProductList = () => {
         const res = await fetch("/api/products");
         const result = await res.json();
         const data: Product[] = result.data || [];
-        await new Promise((resolve) => setTimeout(resolve, 500));
         setProducts(data);
-        const uniqueCategories = Array.from(
-          new Set(data.map((p) => p.category).filter(Boolean))
-        );
-        setCategories(uniqueCategories as string[]);
       } catch (err) {
         console.error("Error fetching products:", err);
       } finally {
@@ -41,124 +33,136 @@ const ProductList = () => {
     fetchProducts();
   }, []);
 
-  const filteredProducts = products.filter(
-    (product) =>
-      selectedCategory === "all" || product.category === selectedCategory
-  );
+  const openOverlay = (index: number) => setCurrentProductIndex(index);
+  const closeOverlay = () => setCurrentProductIndex(null);
+  const prevProduct = () =>
+    currentProductIndex !== null &&
+    setCurrentProductIndex(currentProductIndex === 0 ? products.length - 1 : currentProductIndex - 1);
+  const nextProduct = () =>
+    currentProductIndex !== null &&
+    setCurrentProductIndex(currentProductIndex === products.length - 1 ? 0 : currentProductIndex + 1);
 
-  if (loading) {
+  if (loading)
     return (
       <div className="flex justify-center items-center h-screen">
         <div className="w-16 h-16 border-4 border-[#205057] border-t-transparent border-b-transparent rounded-full animate-spin"></div>
       </div>
     );
-  }
 
   return (
     <>
       <Navbar />
-      <div className="h-auto md:mb-32  relative overflow-hidden">
-        <div className="relative z-10">
-          <div className="text-center py-24 px-2 md:px-6 bg-[#205057] relative">
-            <div className="mb-6">
-              <h1 className="text-2xl md:text-4xl font-black text-white mb-4 z-20">
-                Explore Our <span className="">Products</span>
-              </h1>
-              <div className="w-52 h-1 bg-white mx-auto rounded-full"></div>
-            </div>
-            <p className="text-slate-300 mt-8 max-w-4xl mx-auto  md:text-2xl font-light leading-relaxed">
-              Discover precision-engineered solutions designed to optimize
-              production, enhance efficiency, and ensure consistent quality in
-              your manufacturing operations.
-            </p>
-          </div>
 
-          {categories.length > 0 && (
-            <div className="flex flex-wrap  gap-4 mt-10 mb-16 px-6 container mx-auto justify-center items-center">
+      {currentProductIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/80 z-50 flex flex-col items-center justify-center px-2 py-6 animate-fadeIn"
+          onClick={closeOverlay}
+        >
+          <div
+            className="relative max-w-5xl w-full flex flex-col items-center bg-white rounded-xl shadow-2xl p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeOverlay}
+              className="absolute top-4 right-4 text-gray-800 hover:text-gray-600 transition"
+            >
+              <X size={28} />
+            </button>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 text-center">
+              {products[currentProductIndex].productName}
+            </h2>
+
+            <div className="relative w-full flex items-center justify-center mb-4">
               <button
-                onClick={() => setSelectedCategory("all")}
-                className={`px-6 py-2 rounded-full font-semibold text-sm md:text-base transition-all duration-300 border ${
-                  selectedCategory === "all"
-                    ? "bg-[#205057] text-white border-transparent shadow-md"
-                    : "bg-gray-700 text-gray-300 border-gray-500 hover:bg-gray-600 hover:text-white hover:shadow-sm"
-                }`}
+                onClick={prevProduct}
+                className="absolute left-0 text-gray-800 bg-white/80 p-2 rounded-full hover:bg-white transition"
               >
-                All Products
+                <ChevronLeft size={28} />
               </button>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-6 py-2 rounded-full font-semibold text-sm md:text-base transition-all duration-300 border ${
-                    selectedCategory === cat
-                      ? "bg-[#447c73] text-white border-transparent shadow-md"
-                      : " text-black border-gray-800 hover:shadow-sm"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+
+              {products[currentProductIndex].productImage?.[0] && (
+                <img
+                  src={products[currentProductIndex].productImage[0]}
+                  alt={products[currentProductIndex].productName}
+                  className="max-h-[60vh] w-auto rounded-lg shadow-lg border border-gray-200 object-contain"
+                />
+              )}
+
+              <button
+                onClick={nextProduct}
+                className="absolute right-0 text-gray-800 bg-white/80 p-2 rounded-full hover:bg-white transition"
+              >
+                <ChevronRight size={28} />
+              </button>
             </div>
-          )}
 
-          <div className="container mx-auto px-6 pb-20 h-auto">
-            {filteredProducts.length === 0 ? (
-              <div className="text-center py-32">
-                <p className="text-slate-600 text-2xl font-light">
-                  No products found
-                </p>
+            <div className="w-full bg-green-50 border border-emerald-300 rounded-lg shadow p-4 flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+              <div className="flex items-center gap-3">
+                <Phone className="text-emerald-600" />
+                <span className="font-medium text-gray-800">+91 9710946801</span>
               </div>
-            ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 relative">
-                {filteredProducts.map((product, index) => (
-                  <div
-                    key={product._id}
-                    className="group relative bg-white/10 backdrop-blur-lg border border-gray-400 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 transform hover:scale-105 "
-                    style={{
-                      animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
-                    }}
-                  >
-                    <Link href={`/products/${product.productPath}`}>
-                      <div className="relative overflow-hidden h-64">
-                        {product.mainImage?.[0] && (
-                          <img
-                            src={product.mainImage[0]}
-                            alt={product.productName}
-                            className="w-full h-full  transition-transform duration-700 group-hover:scale-125"
-                          />
-                        )}
-                      </div>
-                    </Link>
+              <div className="flex items-center gap-3">
+                <Mail className="text-emerald-600" />
+                <span className="font-medium text-gray-800">unicornpdy@gmail.com</span>
+              </div>
+              <Link
+                href="/contact"
+                className="mt-2 md:mt-0 px-6 py-2 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
 
-                    <div className="relative p-6 space-y-4 pb-20">
-                      <h2 className="text-xl text-black font-bold transition-all duration-300">
-                        {product.productName}
-                      </h2>
-                      <p className="text-black text-base leading-relaxed line-clamp-3">
-                        {product.description}
-                      </p>
-                    </div>
+      {/* Product Grid */}
+      <div className="relative h-auto md:mb-32 overflow-hidden">
+        <div className="text-center py-24 px-2 md:px-6 bg-[#205057] relative">
+          <div className="mb-6">
+            <h1 className="text-2xl md:text-5xl font-sans text-white mb-4">
+              Explore Our Products
+            </h1>
+            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
+          </div>
+          <p className="text-slate-200 mt-8 max-w-4xl mx-auto md:text-xl font-sans leading-relaxed">
+            Discover precision-engineered solutions designed to optimize production, enhance efficiency, and ensure consistent quality in your manufacturing operations.
+          </p>
+        </div>
 
-                    <Link
-                      href={`/products/${product.productPath}`}
-                      className="bg-[#205057] pt-1 flex absolute bottom-0 w-full "
-                    >
-                      <div className="flex items-center justify-center gap-6">
-                        <div className="flex gap-2 px-6 py-3 rounded-xl text-white  font-semibold transition-transform duration-300 hover:scale-105">
-                          View Details{" "}
-                          <span>
-                            <MoveRight />
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
+        <div className="container mx-auto px-4 xl:px-10 2xl:px-14 py-20 h-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((product, index) => (
+              <div
+                key={product._id}
+                className="group relative bg-white border border-gray-500 rounded-xl overflow-hidden shadow-lg transition-all transform hover:scale-105 cursor-pointer"
+                onClick={() => openOverlay(index)}
+              >
+                <div className="relative overflow-hidden h-64">
+                  {product.productImage?.[0] && (
+                    <img
+                      src={product.productImage[0]}
+                      alt={product.productName}
+                      className="w-full h-full  transition-transform duration-700 group-hover:scale-110"
+                    />
+                  )}
+
+                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="text-white font-semibold bg-emerald-700 px-4 py-2 rounded-lg shadow">
+                      View Product
+                    </span>
                   </div>
-                ))}
+                </div>
+                <div className="p-6 text-center">
+                  <h2 className="text-xl text-gray-800 font-bold">{product.productName}</h2>
+                </div>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

@@ -3,7 +3,6 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import Sidebar from "@/components/Sidebar";
 
 const TestimonialUpload = () => {
   const [clientName, setClientName] = useState("");
@@ -63,8 +62,6 @@ const TestimonialUpload = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <Sidebar />
-
       <div className="flex-1 flex items-center justify-center p-6 py-20">
         <form
           onSubmit={handleSubmit}

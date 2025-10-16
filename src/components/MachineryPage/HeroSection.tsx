@@ -36,7 +36,7 @@ const HeroSection = () => {
   return (
     <div className="py-10  px-12 bg-[#205057]">
       <div className="text-center mb-20">
-        <h1 className="text-3xl md:text-4xl lg:text-4xl font-extrabold text-white mb-6 leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl font-sans  text-white mb-6 leading-tight">
           Our Machinery
         </h1>
 
@@ -47,16 +47,16 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8 pb-12">
         {highlights.map((item, idx) => (
           <div
             key={idx}
-            className="group relative p-8 bg-white border border-orange-200 rounded-2xl hover:shadow-xl  transition-all duration-500 hover:scale-105"
+            className="group relative p-5 2xl:p-8 bg-white border border-orange-200 rounded-2xl hover:shadow-xl  transition-all duration-500 hover:scale-105"
           >
             <div className="inline-flex p-4 rounded-2xl bg-[#447c73] text-white mb-6 group-hover:scale-110 transition-transform duration-300">
               {item.icon}
             </div>
-            <h3 className="text-2xl font-bold text-[#071520] mb-4 group-hover:text-[#205057] transition-colors">
+            <h3 className="text-2xl font-sans font-semibold text-[#071520] mb-4 group-hover:text-[#205057] transition-colors">
               {item.title}
             </h3>
             <p className="text-gray-700 leading-relaxed">{item.desc}</p>

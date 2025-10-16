@@ -31,7 +31,7 @@ const MilestoneSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[#071520]">
+          <h2 className="text-2xl md:text-4xl font-sans font-semibold text-[#071520]">
             Our Key <span className="text-[#205057]">Achievements</span>
           </h2>
           <div className="w-52 h-1 bg-[#205057] mx-auto rounded-full mt-2"></div>
@@ -54,7 +54,7 @@ const MilestoneSection = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="hidden lg:block"></div>
               <div className="relative bg-gradient-to-br from-orange-50 to-sky-100 backdrop-blur-sm border border-gray-400 rounded-xl p-8 shadow-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Strategic Growth</h3>
+                <h3 className="text-xl font-bold font-sans text-gray-800 mb-4">Strategic Growth</h3>
                 <p className="text-gray-700 leading-relaxed">
                  The company’s scope and demand for the services offered by them is constantly growing due to their strategic location and proximity to the OEM’s & Tier 1 Automobile Manufacturers.                </p>
               </div>
@@ -62,7 +62,7 @@ const MilestoneSection = () => {
 
             <div className="grid lg:grid-cols-2 gap-14 items-center lg:flex-row-reverse">
               <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 backdrop-blur-sm border border-gray-400 rounded-xl p-8 shadow-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Employee Development</h3>
+                <h3 className="text-xl font-bold font-sans text-gray-800 mb-4">Employee Development</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Regular Training is imparted to all levels of employees and training effectiveness is evaluated by the respective department heads.
                 </p>
@@ -73,7 +73,7 @@ const MilestoneSection = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="hidden lg:block"></div>
               <div className="relative bg-gradient-to-br from-orange-50 to-red-50 backdrop-blur-sm border border-gray-400 rounded-xl p-8 shadow-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Quality Excellence</h3>
+                <h3 className="text-xl font-sans font-bold text-gray-800 mb-4">Quality Excellence</h3>
                 <p className="text-gray-700 leading-relaxed">
                   High level impetus is given to quality as most of the parts manufactured by the organization is used in critical components.
                 </p>
@@ -82,7 +82,7 @@ const MilestoneSection = () => {
 
              <div className="grid lg:grid-cols-2 gap-14 items-center lg:flex-row-reverse">
               <div className="relative bg-gradient-to-br from-rose-50 to-pink-50 backdrop-blur-sm border border-gray-400 rounded-xl p-8 shadow-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Regular Audits</h3>
+                <h3 className="text-xl font-bold  font-sans text-gray-800 mb-4">Regular Audits</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Regular audits are conducted to ensure the customer requirements are met. 
                 </p>
@@ -93,7 +93,7 @@ const MilestoneSection = () => {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="hidden lg:block"></div>
               <div className="relative bg-gradient-to-br from-orange-50 to-red-50 backdrop-blur-sm border border-gray-400 rounded-xl p-8 shadow-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Environmental Responsibility</h3>
+                <h3 className="text-xl font-bold font-sans text-gray-800 mb-4">Environmental Responsibility</h3>
                 <p className="text-gray-700 leading-relaxed">
                 The organization discharges zero effluents into environment and organization is endorsed for compliance by Pollution Control Board.
                 </p>
@@ -102,7 +102,7 @@ const MilestoneSection = () => {
 
                 <div className="grid lg:grid-cols-2 gap-14 items-center lg:flex-row-reverse">
               <div className="relative bg-gradient-to-br from-rose-50 to-pink-50 backdrop-blur-sm border border-gray-400 rounded-xl p-8 shadow-2xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Regulatory Adherence</h3>
+                <h3 className="text-xl font-bold font-sans text-gray-800 mb-4">Regulatory Adherence</h3>
                 <p className="text-gray-700 leading-relaxed">
                 The organization attaches great significance to statutory compliance and adherence is reviewed by top management in regular intervals.
                 </p>

@@ -34,7 +34,7 @@ const InstrumentGallery = () => {
     <section className=" py-10 md:mb-20 bg-[#205057]">
       <div className="container mx-auto px-0  lg:px-5">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-white  font-extrabold mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-white  font-sans mb-6">
             Our{" "}
             <span className="">
               Measuring & Inspection Instruments

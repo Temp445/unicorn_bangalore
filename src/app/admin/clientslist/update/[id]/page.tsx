@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import axios from "axios";
-import Sidebar from "@/components/Sidebar";
 
 const ClientUpdate = () => {
   const router = useRouter();
@@ -83,11 +82,10 @@ const ClientUpdate = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      <Sidebar />
       <div className="flex-1 p-6 lg:p-12">
         <form
           onSubmit={handleSubmit}
-          className="max-w-3xl mx-auto bg-white border shadow-lg rounded-2xl p-8 space-y-8"
+          className="max-w-2xl mx-auto bg-white border shadow-lg rounded-2xl p-8 space-y-8"
         >
           <h2 className="text-3xl font-bold text-gray-800 text-center">
             Update Client

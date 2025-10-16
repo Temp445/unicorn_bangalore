@@ -72,7 +72,7 @@ const ManufacturingSector = () => {
         transition={{ duration: 0.8 }}
       >
         <motion.h2
-          className="text-2xl md:text-4xl font-extrabold text-[#071520] mb-6"
+          className="text-2xl md:text-4xl font-sans font-semibold text-[#071520] mb-6"
           variants={itemVariants}
         >
           Driving Innovation in{' '}
@@ -154,22 +154,22 @@ const ManufacturingSector = () => {
       >
         <div className="bg-[#071520] rounded md:rounded-3xl p-5 md:p-16 text-white relative overflow-hidden shadow-2xl">
           <div className="relative z-10">
-            <h3 className="text-xl lg:text-4xl font-black mb-6">
+            <h3 className="text-xl lg:text-4xl font-sans font-semibold mb-6">
               Ready to Redefine Manufacturing Excellence?
             </h3>
-            <p className="md:text-lg mb-12 text-white/90 max-w-3xl mx-auto font-medium leading-relaxed">
+            <p className=" md:text-lg mb-12 text-white/90 max-w-3xl mx-auto font-medium leading-relaxed">
               Discover how our advanced automobile manufacturing capabilities can 
               deliver precision, efficiency, and durability for your business growth.
             </p>
             
-            <div className="flex sm:flex-row gap-6 justify-center items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6  md:w-fit mx-auto justify-center items-center">
               <Link href="/products"
-                className="text-white bg-[#205057]  px-5 py-3 md:px-10 md:py-5 rounded-xl font-black text-sm md:text-base  transition-all duration-500 shadow-2xl hover:shadow-3xl hover:scale-105"
+                className="text-white bg-[#205057] md:w-fit   px-5 py-3 md:px-10 md:py-5 rounded-xl  text-sm md:text-base  transition-all duration-500 shadow-2xl hover:shadow-3xl hover:scale-105"
               >
                 Explore Our Products
               </Link>
               <Link href="/contact"
-                className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white px-5 py-2.5 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black text-sm md:text-base hover:bg-white/20 transition-all duration-500 hover:scale-105"
+                className="border-2 border-white/30  md:w-fit bg-white/10 backdrop-blur-sm text-white px-5 py-2.5 md:px-10 md:py-5 rounded-xl md:rounded-2xl text-sm md:text-base hover:bg-white/20 transition-all duration-500 hover:scale-105"
               >
                Contact Us
               </Link>

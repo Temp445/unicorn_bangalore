@@ -35,12 +35,12 @@ const Clients = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
      
-          <h2 className="text-4xl md:text-5xl font-bold text-white  leading-tight">
+          <h2 className="text-3xl md:text-5xl  font-sans text-white  leading-tight">
             Our Clients
           </h2>
           <div className='w-32 h-1 mx-auto bg-white rounded-full mb-6'></div>
           
-          <p className="text-lg text-[#e5e5e5] max-w-2xl mx-auto leading-relaxed">
+          <p className=" md:text-lg text-[#e5e5e5] max-w-2xl mx-auto leading-relaxed">
             We're proud to work with forward-thinking companies that trust us to deliver 
             exceptional results and drive innovation in their industries.
           </p>
@@ -52,7 +52,7 @@ const Clients = () => {
             gradient={false} 
             pauseOnHover={true} 
             speed={50}
-            className="py-10"
+            className=" md:py-10"
           >
             {clients.map((client, index) => (
               <div

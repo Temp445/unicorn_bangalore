@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
           <span className="inline-flex items-center rounded-full bg-[#205057] px-3 py-1 text-sm font-medium text-white">
             Why Choose Us
           </span>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#071520] sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-sans  tracking-tight text-[#071520] sm:text-4xl">
             Excellence in Precision Auto-Turned Components
           </h2>
           <p className="mt-3 text-gray-600">

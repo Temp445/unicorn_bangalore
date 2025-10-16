@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import axios from 'axios';
-import Sidebar from '@/components/Sidebar';
 
 const InstrumentUpdate = () => {
   const router = useRouter();
@@ -101,7 +100,6 @@ const InstrumentUpdate = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <Sidebar />
       <div className="flex-1 flex justify-center p-6 mt-[5vh] h-fit">
         <form
           onSubmit={handleSubmit}

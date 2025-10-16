@@ -48,7 +48,7 @@ const CountSection = () => {
 
   return (
     <section ref={ref} className="relative md:py-14 overflow-hidden bg-gray-50">
-      <div className="container mx-auto px-4 md:px-14 lg:px-2 xl:px-24">
+      <div className="container mx-auto px-4 md:px-14 lg:px-2 2xl:px-24">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-4">
           {stats.map((stat, i) => {
             const Icon = stat.icon;
@@ -73,7 +73,7 @@ const CountSection = () => {
                     <Icon className="text-white w-8 h-8" />
                   </motion.div>
                   <div>
-                    <p className="text-xl md:text-2xl xl:text-3xl font-extrabold text-[#071520] group-hover:text-[#205057] transition-colors">
+                    <p className="text-xl md:text-2xl xl:text-3xl font-extrabold font-sans text-[#071520] group-hover:text-[#205057] transition-colors">
                       {prefix}
                       {counts[i]}
                       {suffix}

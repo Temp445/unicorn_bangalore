@@ -3,7 +3,6 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-import Sidebar from '@/components/Sidebar';
 
 const MachineryUpload = () => {
   const router = useRouter();
@@ -56,8 +55,6 @@ const MachineryUpload = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50 container mx-auto">
-      <Sidebar />
-
       <div className="flex-1 flex mt-[10vh] justify-center p-6">
         <form
           onSubmit={handleSubmit}
