@@ -1,7 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight, Phone, Mail } from "lucide-react";
 import Link from "next/link";
@@ -51,8 +49,6 @@ const ProductList = () => {
 
   return (
     <>
-      <Navbar />
-
       {currentProductIndex !== null && (
         <div
           className="fixed inset-0 bg-black/80 z-50 flex flex-col items-center justify-center px-2 py-6 animate-fadeIn"
@@ -124,7 +120,7 @@ const ProductList = () => {
             <h1 className="text-2xl md:text-5xl font-sans text-white mb-4">
               Explore Our Products
             </h1>
-            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
+            <div className="w-40 h-1 bg-white mx-auto rounded-full"></div>
           </div>
           <p className="text-slate-200 mt-8 max-w-4xl mx-auto md:text-xl font-sans leading-relaxed">
             Discover precision-engineered solutions designed to optimize production, enhance efficiency, and ensure consistent quality in your manufacturing operations.
@@ -162,8 +158,6 @@ const ProductList = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

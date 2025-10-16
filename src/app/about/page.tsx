@@ -4,8 +4,6 @@ import MilestoneSection from '@/components/Aboutpage/MilestoneSection'
 import CountSection from '@/components/Aboutpage/CountSection'
 import WhyChooseUs from '@/components/Aboutpage/WhyChooseUs'
 import StorySection from '@/components/Aboutpage/StorySection'
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next';
 import Founder from '@/components/Aboutpage/Founder'
 import VisionSection from '@/components/Aboutpage/VisionSection'
@@ -35,7 +33,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
   <>
-  <Navbar/>
   <HeroSection/>
   <StorySection/>
   <CountSection/>
@@ -44,7 +41,6 @@ export default function AboutPage() {
   <Founder/>
   <WhyChooseUs/>
   <CardSection/>
-  <Footer/>
   </>
   )
 }

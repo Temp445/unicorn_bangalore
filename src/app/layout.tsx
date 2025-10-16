@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from '@/context/AuthContext';
 import BackToTop from "@/components/BackToTop";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL;
 
@@ -52,8 +54,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
        <AuthProvider>
+        <Navbar/>
         {children}
         <BackToTop/>
+        <Footer/>
         </AuthProvider>
       </body>
     </html>

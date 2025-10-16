@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -41,8 +40,6 @@ export default function RegisterPage() {
   };
 
   return (
-    <div>
-      <Navbar/>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-md bg-white shadow-lg rounded-xl p-8">
         <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center">
@@ -103,8 +100,6 @@ export default function RegisterPage() {
           </Link>
         </p>
       </div>
-    </div>
-    <Footer/>
     </div>
   );
 }
