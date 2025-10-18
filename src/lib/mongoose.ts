@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 
 const MONGODB_URI = process.env.DB_URL!;
-const DB_NAME = 'unicorn_database';
+const DB_NAME = 'erp_database';
 
 
 let isConnected = false;
