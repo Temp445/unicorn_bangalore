@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Rajasekaran from "@/assets/Rajasekaran.png";
 import Rajagopalan from "@/assets/Rajagopalan.png";
+import Abishek from "@/assets/Abishek.png";
 
 const Founder = () => {
   return (
@@ -17,7 +18,7 @@ const Founder = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
           <div className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-lg hover:shadow-2xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2">
             <div className="mb-8 flex justify-center">
               <div className="relative rounded-full">
@@ -36,12 +37,12 @@ const Founder = () => {
                 R. Rajagopalan
               </h3>
               <div className="inline-block bg-[#205057] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-                Chairman
+                Managing Director
               </div>
 
               <p className="text-[#071520] font-sans leading-relaxed mb-6">
-                Chairman of Unicorn (Bangalore) Private Limited is a Diploma
-                Holder with over{" "}
+                Managing Director of Unicorn (Bangalore) Private Limited is a Diploma
+                Holder with over {" "}
                 <span className="font-bold text-[#205057]">
                   35 years’ experience
                 </span>{" "}
@@ -69,12 +70,12 @@ const Founder = () => {
                 S. Rajasekaran
               </h3>
               <div className="inline-block bg-[#205057] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-                Managing Director
+               Joint Managing Director
               </div>
 
               <p className="text-[#071520] font-sans leading-relaxed mb-6">
-                Managing Director of Unicorn (Bangalore) Private Limited is a
-                MBA Graduate with over{" "}
+               Joint Managing Director of Unicorn (Bangalore) Private Limited is a
+                PhD Graduate in Mechanical Engineering with over{" "}
                 <span className="font-bold text-[#205057]">
                   {" "}
                   25 years’ experience
@@ -82,6 +83,37 @@ const Founder = () => {
                 in Materials Management & System Design and Finance is also the
                 Founder & CEO of ASSPL, who leads the day-to-day functions on a
                 strategic level with his domain expertise.
+              </p>
+            </div>
+          </div>
+           <div className="group bg-white rounded-2xl p-8 border border-slate-200 shadow-lg hover:shadow-2xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-2">
+            <div className="mb-8 flex justify-center">
+              <div className="relative group">
+                <Image
+                  src={Abishek}
+                  alt="Abishek"
+                  width={200}
+                  height={200}
+                  className="relative rounded-full h-52 w-52 border-4 border-white shadow-xl transform group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+              </div>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold font-sans text-slate-900 mb-2">
+                R. Abishek Karthik
+              </h3>
+              <div className="inline-block bg-[#205057] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+               Special Director
+              </div>
+
+              <p className="text-[#071520] font-sans leading-relaxed mb-6">
+                Special Director of unicorn(Bangalore) Private Limited is BE(Mechanical Engineering), MBA Graduate with over {" "}
+                <span className="font-bold text-[#205057]">
+                  {" "}
+                  10 years’ Experience
+                </span>{" "}
+              in operations Management , who leads the New Product Development and sourcing requirements of the organization. 
               </p>
             </div>
           </div>

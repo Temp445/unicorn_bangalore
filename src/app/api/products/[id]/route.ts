@@ -54,7 +54,37 @@ export async function PUT(req: NextRequest) {
     }
 
     product.productName = (formData.get("productName") as string) || product.productName;
+    product.productPath = (formData.get("productPath") as string) || product.productPath;
+    product.productLink = (formData.get("productLink") as string) || product.productLink;
+    product.calendlyUrl = (formData.get("calendlyUrl") as string) || product.calendlyUrl;
+    product.description = (formData.get("description") as string) || product.description;
+    product.why_choose_des = (formData.get("why_choose_des") as string) || product.why_choose_des;
+    product.who_need_des = (formData.get("who_need_des") as string) || product.who_need_des;
+    product.category = (formData.get("category") as string) || product.category;
 
+    // Upload mainImage
+    const newMainImages: string[] = [];
+    for (const file of formData.getAll("mainImage")) {
+      if (file instanceof File) {
+        const bytes = await file.arrayBuffer();
+        const buffer = Buffer.from(bytes);
+
+        const uploaded = await new Promise<any>((resolve, reject) => {
+          cloudinary.uploader
+            .upload_stream({ folder: "products/main" }, (error, result) => {
+              if (error) reject(error);
+              else resolve(result);
+            })
+            .end(buffer);
+        });
+
+        newMainImages.push(uploaded.secure_url);
+      }
+    }
+
+    if (newMainImages.length > 0) {
+      product.mainImage = newMainImages;
+    }
 
     // Upload productImage
     const newProductImages: string[] = [];
@@ -80,6 +110,23 @@ export async function PUT(req: NextRequest) {
       product.productImage = newProductImages;
     }
 
+    try {
+      product.whatis = JSON.parse((formData.get("whatis") as string) || "[]");
+    } catch {}
+    try {
+      product.benefits = JSON.parse((formData.get("benefits") as string) || "[]");
+    } catch {}
+    try {
+      product.FAQ = JSON.parse((formData.get("FAQ") as string) || "[]");
+    } catch {}
+    try {
+      product.Result = JSON.parse((formData.get("Result") as string) || "[]");
+    } catch {}
+    try {
+      product.customerTestimonials = JSON.parse(
+        (formData.get("customerTestimonials") as string) || "[]"
+      );
+    } catch {}
 
     await product.save();
 
@@ -159,3 +206,4 @@ export async function DELETE(req: NextRequest) {
     );
   }
 }
+

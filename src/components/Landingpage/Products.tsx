@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 interface Product {
   _id: string;
   productName: string;
-  productPath: string;
-  mainImage: string[];
+  productImage: string[];
 }
 
 const Products = () => {
@@ -74,7 +73,7 @@ const Products = () => {
               >
                 <div className="w-full h-52 flex items-center justify-center overflow-hidden mb-3">
                   <img
-                    src={product.mainImage[0]}
+                    src={product.productImage[0]}
                     alt={product.productName}
                     className="w-full h-full object-center rounded-lg"
                   />
@@ -99,7 +98,7 @@ const Products = () => {
             >
               <div className="w-full h-full flex items-center justify-center overflow-hidden">
                 <img
-                  src={product.mainImage[0]}
+                  src={product.productImage[0]}
                   alt={product.productName}
                   className="w-fit h-full  transition-transform duration-700 group-hover:scale-110"
                 />

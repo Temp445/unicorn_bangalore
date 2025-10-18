@@ -7,7 +7,7 @@ import about from "@/assets/operator2.jpg";
 const StorySection = () => {
   const points = [
     "Certified ISO 9001-2000 in 2002; upgraded to IATF 16949–2016 & ISO 9001–2015 in 2022.",
-    "Core business: Manufacturing precision-turned components for critical and safety applications such as brakes, engines, and carburetors.",
+    "Core business: Manufacturing precision-turned components for critical and safety applications such as Seat belt, brakes, engines, and Fuel Injection.",
     "Tier 2 vendor/supplier to major automobile OEMs like Hyundai and Maruti through Tier 1 manufacturers.",
   ];
 

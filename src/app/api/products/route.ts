@@ -7,7 +7,7 @@ import cloudinary from "@/lib/cloudinary";
 export async function GET() {
   try {
     await dbConnect();
-    const products = await Product.find().sort({ uploadedAt: -1 });
+    const products = await Product.find();
     return NextResponse.json({ success: true, data: products }, { status: 200 });
   } catch (err: any) {
     console.error("GET Error:", err);

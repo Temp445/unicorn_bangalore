@@ -5,6 +5,7 @@ import { AuthProvider } from '@/context/AuthContext';
 import BackToTop from "@/components/BackToTop";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL;
 
@@ -57,6 +58,7 @@ export default function RootLayout({
         <Navbar/>
         {children}
         <BackToTop/>
+        <WhatsAppButton/>
         <Footer/>
         </AuthProvider>
       </body>

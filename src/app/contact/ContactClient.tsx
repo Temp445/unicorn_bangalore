@@ -10,6 +10,7 @@ import Image from "next/image";
 import contact from "@/assets/contact.svg";
 import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 const service_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
 const template_ID = process.env.NEXT_PUBLIC_EMAILJS_ENQ_TEMPLATE_ID || "";
@@ -19,6 +20,7 @@ const endpoint = "/api/proxy-validate-email";
 
 const ContactClient = () => {
   const countryCode = "IN";
+  const router = useRouter()
 
   const form = useRef<HTMLFormElement>(null);
   const [email, setEmail] = useState<string>("");
@@ -98,7 +100,7 @@ const ContactClient = () => {
 
     try {
       await emailjs.send(service_ID, template_ID, formData, publicKey);
-      alert("Your enquiry has been sent successfully!");
+      router.push('/thank-you')
       formCurrent.reset();
       setEmail("");
       setPhone("");
@@ -264,19 +266,24 @@ const ContactClient = () => {
         <div className="flex flex-col md:flex-row gap-6 px-7 pb-10 md:pb-0">
           <div className="bg-white shadow-lg rounded-lg p-6 flex-1 text-center border border-[#205057]">
             <h3 className="font-semibold text-lg mb-2">Email</h3>
-            <p>unicornpdy@gmail.com</p>
+         <div className="flex flex-col">
+             <a href="mailto:abishek@infantengineers.in">abishek@infantengineers.in</a>
+            <a href="mailto:rajasekaran@infantengineers.in">rajasekaran@infantengineers.in</a>
+         </div>
           </div>
 
           <div className="bg-white shadow-lg rounded-lg p-6 flex-1 text-center border border-[#205057]">
             <h3 className="font-semibold text-lg mb-2">Phone</h3>
-            <p>+91 9710946801</p>
+         <div className="flex flex-col">
+             <a href="tel:+919701946123">+91 9701946123</a>
+            <a href="tel:+919841706116">+91 9841706116</a>
+         </div>
           </div>
 
           <div className="bg-white shadow-lg rounded-lg p-6 flex-1 text-center border border-[#205057]">
             <h3 className="font-semibold text-lg mb-2">Location</h3>
             <p className="text-sm">
-              Flat B, Ground Floor, Brindavan Apartments 19/9, Tamilar Street,
-              Choolaimedu , Chennai, Tamil Nadu, India - 600094
+              B 69/70, PIPDIC Industrial Estate, Mettupalayam, Puduchery-605009 
             </p>
           </div>
         </div>

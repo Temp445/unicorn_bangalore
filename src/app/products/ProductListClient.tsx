@@ -96,11 +96,17 @@ const ProductList = () => {
             <div className="w-full bg-green-50 border border-emerald-300 rounded-lg shadow p-4 flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
               <div className="flex items-center gap-3">
                 <Phone className="text-emerald-600" />
-                <span className="font-medium text-gray-800">+91 9710946801</span>
+                <div className="flex flex-col">
+                  <a href="tel:+919841706116" className="font-medium text-gray-800">+91 9841706116</a>
+                <a href="tel:+919701946123" className="font-medium text-gray-800">+91 9701946123</a>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="text-emerald-600" />
-                <span className="font-medium text-gray-800">unicornpdy@gmail.com</span>
+               <div className="flex flex-col">
+                 <a href="mailto:abishek@infantengineers.in" className="font-medium text-gray-800">abishek@infantengineers.in</a>
+                <a href="mailto:rajasekaran@infantengineers.in" className="font-medium text-gray-800">rajasekaran@infantengineers.in</a>
+               </div>
               </div>
               <Link
                 href="/contact"

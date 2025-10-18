@@ -28,7 +28,7 @@ const highlights: HighlightCardProps[] = [
   {
     icon: <Shield className="w-10 h-10" />,
     title: "Premium Standards",
-    desc: "Multiple ISO certifications, streamlined processes, and continuous quality monitoring.",
+    desc: "Quality certifications, streamlined processes, and continuous quality monitoring.",
   },
 ];
 

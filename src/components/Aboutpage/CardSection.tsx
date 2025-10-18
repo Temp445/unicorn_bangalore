@@ -32,17 +32,15 @@ const CardSection = () => {
           </div>
 
           <div className="lg:grid grid-cols-2 gap-4 hidden">
-            <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 text-center">
-              <p className="xl:text-xl font-bold text-[#205057]">
-                +91 9710946801
-              </p>
+            <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 text-center flex flex-col">
+              <a href="tel:+919701946123" className="xl:text-lg font-bold text-[#205057]">+91 9701946123</a>
+              <a href="tel:+919841706116" className="xl:text-lg font-bold text-[#205057]">+91 9841706116</a>
               <p className="text-sm text-[#071520]">Phone</p>
             </div>
 
-            <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 w-60 xl:w-auto text-center">
-              <p className="xl:text-xl font-bold text-[#205057]">
-                unicornpdy@gmail.com
-              </p>
+            <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 w-60 xl:w-auto text-center flex flex-col">
+              <a href="mailto:abishek@infantengineers.in" className="xl:text-lg font-bold text-[#205057]">abishek@infantengineers.in</a>
+              <a href="mailto:rajasekaran@infantengineers.in" className="xl:text-lg font-bold text-[#205057]">rajasekaran@infantengineers.in</a>
               <p className="text-sm text-[#071520]">Email Id</p>
             </div>
 

@@ -6,9 +6,9 @@ import { useInView } from "react-intersection-observer";
 
 const CountSection = () => {
   const stats = [
-    { label: "Years in Business", value: "31+", icon: Layers },
-    { label: "Satisfied Clients", value: "99%", icon: Users },
-    { label: "Rejection Rate", value: "<100 PPM", icon: Cog },
+    { label: "Years in Business", value: "40+", icon: Layers },
+    { label: "Satisfied Clients", value: "100%", icon: Users },
+    { label: "Zero quality incidences at customer end. ", value: "", icon: Cog },
     { label: "Automotive Projects", value: "500+", icon: Award },
   ];
 

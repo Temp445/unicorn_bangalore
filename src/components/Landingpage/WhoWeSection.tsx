@@ -37,7 +37,7 @@ const WhoWeSection = () => {
               2001 it was acquired by Ace Group of Companies. Presently, it is
               an associated company of “Infant Engineers Private Limited” and
               has a turnover of{" "}
-              <span className="text-[#205057]">INR 30 million</span>.
+              <span className="text-[#205057]">INR 50 million</span>.
             </p>
             <div className="mt-12">
               <Link
@@ -75,7 +75,7 @@ const WhoWeSection = () => {
             <div className="bg-white rounded-xl md:rounded-full  h-36 md:w-40 md:h-40 xl:w-52 xl:h-52 flex flex-col items-center justify-center p-4 gap-4 shadow-md md:-rotate-45">
               <CalendarRange className="w-14 h-12 text-[#205057]" />
               <h3 className="md:text-lg font-semibold text-gray-700 text-center">
-                31+ Years in Business
+                40+ Years in Business
               </h3>
             </div>
           </motion.div>
@@ -89,8 +89,8 @@ const WhoWeSection = () => {
           >
             <div className="bg-white rounded-xl md:rounded-full h-36 md:w-40 md:h-40 xl:w-52 xl:h-52 flex flex-col items-center justify-center p-2 md:p-4 gap-4 shadow-md md:-rotate-45 border border-[#071520] md:border-0">
               <Sparkles className="w-10 h-10 text-[#071520] -rotate-6" />
-              <h3 className="text-base md:text-lg font-semibold text-gray-700 text-center">
-                99% Client Satisfaction
+              <h3 className="text-base font-semibold text-gray-700 text-center">
+                Vendor rating from customers – Class “A” Supplier 
               </h3>
             </div>
           </motion.div>

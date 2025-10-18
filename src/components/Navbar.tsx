@@ -80,14 +80,14 @@ const Navbar = () => {
     <Disclosure as="nav" className="sticky top-0 z-50 bg-white backdrop-blur-md shadow-lg border-b border-gray-200">
       {({ open }) => (
         <>
-          <div className="mx-auto container px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto container px-4 sm:px-6 xl:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <Link href="/" className="flex items-center space-x-2">
                 <Image src={logo} alt="Company Logo" className="h-9 md:h-9 w-9" />
                 <span className="text-gray-900 font-bold text-base mt-1 tracking-wide">	Unicorn (Bangalore) Pvt. Ltd</span>
               </Link>
 
-              <div className="hidden lg:flex space-x-6">
+              <div className="hidden lg:flex space-x-4 xl:space-x-6">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href
                   return item.onClick ? (

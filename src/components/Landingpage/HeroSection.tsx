@@ -46,21 +46,10 @@ const HeroSection = () => {
             <div className="flex items-center gap-2 border border-gray-300 py-1.5 px-4 rounded-full shadow-2xl bg-white">
               <Shield className="w-10 h-10 text-white bg-[#447c73] rounded-full p-2" />
               <span className="font-medium text-[#205057]">
-                Safety Certified
+               Quality Certification – ISO 9001 : 2015, IATF:16949 :2016 
               </span>
             </div>
 
-            <div className="hidden md:flex lg:flex xl:flex items-center gap-2 border border-gray-300 py-1.5 px-4 rounded-full shadow-2xl bg-white">
-              <Award className="w-10 h-10 text-white bg-[#447c73] rounded-full p-2" />
-              <span className="font-medium text-[#205057]">ISO Compliant</span>
-            </div>
-
-            <div className="flex items-center gap-2 text-gray-700 border border-gray-300 py-1.5 px-4 rounded-full shadow-2xl bg-white">
-              <CheckCircle className="w-10 h-10 text-white bg-[#447c73] rounded-full p-2" />
-              <span className="font-medium text-[#205057]">
-                Quality Assured
-              </span>
-            </div>
           </motion.div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start md:mt-14">
