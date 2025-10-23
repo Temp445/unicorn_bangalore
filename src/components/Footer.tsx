@@ -108,11 +108,11 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-[#205057]" />
                 </span>
                 <div className="flex flex-col">
-                  <a href="mailto:abishek@infantengineers.in">
-                    abishek@infantengineers.in
+                  <a href="mailto:unicornpdy@gmail.com">
+                    unicornpdy@gmail.com
                   </a>
-                  <a href="mailto:rajasekaran@infantengineers.in">
-                    rajasekaran@infantengineers.in
+                  <a href="mailto:planthead@unicornpdy.in">
+                    planthead@unicornpdy.in
                   </a>
                 </div>
               </li>
@@ -122,7 +122,7 @@ const Footer = () => {
           <div className=" w-full lg:w-1/2 h-52 rounded-lg overflow-hidden border border-gray-700 lg:hidden xl:block">
             <iframe
               title="Unicorn ERP Location"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15546.402389406661!2d80.215027!3d13.061076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266947093a395%3A0x10b037f79c6e698f!2sBrindavanam%20Apartments!5e0!3m2!1sen!2sus!4v1755847210839!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15613.472201393637!2d79.76085149746156!3d11.949000022116811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5360de8befe401%3A0xbb1923e32e967a0a!2sPipdic%20Industrial%20Estate%2C%20Mettupalayam%2C%20Marie%20Oulgaret%2C%20Puducherry%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1761212517045!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

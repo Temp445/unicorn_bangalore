@@ -267,8 +267,8 @@ const ContactClient = () => {
           <div className="bg-white shadow-lg rounded-lg p-6 flex-1 text-center border border-[#205057]">
             <h3 className="font-semibold text-lg mb-2">Email</h3>
          <div className="flex flex-col">
-             <a href="mailto:abishek@infantengineers.in">abishek@infantengineers.in</a>
-            <a href="mailto:rajasekaran@infantengineers.in">rajasekaran@infantengineers.in</a>
+             <a href="mailto:unicornpdy@gmail.com">unicornpdy@gmail.com</a>
+            <a href="mailto:planthead@unicornpdy.in">planthead@unicornpdy.in</a>
          </div>
           </div>
 

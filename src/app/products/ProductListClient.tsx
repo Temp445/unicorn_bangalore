@@ -104,8 +104,8 @@ const ProductList = () => {
               <div className="flex items-center gap-3">
                 <Mail className="text-emerald-600" />
                <div className="flex flex-col">
-                 <a href="mailto:abishek@infantengineers.in" className="font-medium text-gray-800">abishek@infantengineers.in</a>
-                <a href="mailto:rajasekaran@infantengineers.in" className="font-medium text-gray-800">rajasekaran@infantengineers.in</a>
+                 <a href="mailto:unicornpdy@gmail.com" className="font-medium text-gray-800">unicornpdy@gmail.com</a>
+                <a href="mailto:planthead@unicornpdy.in" className="font-medium text-gray-800">planthead@unicornpdy.in</a>
                </div>
               </div>
               <Link

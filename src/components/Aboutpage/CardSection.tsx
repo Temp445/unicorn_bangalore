@@ -39,8 +39,8 @@ const CardSection = () => {
             </div>
 
             <div className="rounded-lg border border-gray-300 bg-gray-50 p-6 w-60 xl:w-auto text-center flex flex-col">
-              <a href="mailto:abishek@infantengineers.in" className="xl:text-lg font-bold text-[#205057]">abishek@infantengineers.in</a>
-              <a href="mailto:rajasekaran@infantengineers.in" className="xl:text-lg font-bold text-[#205057]">rajasekaran@infantengineers.in</a>
+              <a href="mailto:unicornpdy@gmail.com" className="xl:text-lg font-bold text-[#205057]">unicornpdy@gmail.com</a>
+              <a href="mailto:planthead@unicornpdy.in" className="xl:text-lg font-bold text-[#205057]">planthead@unicornpdy.in</a>
               <p className="text-sm text-[#071520]">Email Id</p>
             </div>
 

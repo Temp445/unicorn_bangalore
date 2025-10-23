@@ -57,17 +57,17 @@ const ThankYouPage = () => {
                 </div>
                 <div>
                   <a
-                    href="mailto:abishek@infantengineers.in"
+                    href="mailto:unicornpdy@gmail.com"
                     className="text-gray-700 font-medium"
                   >
-                    abishek@infantengineers.in
+                    unicornpdy@gmail.com
                   </a>{" "}
                   <br />
                   <a
-                    href="mailto:rajasekaran@infantengineers.in"
+                    href="mailto:planthead@unicornpdy.in"
                     className="text-gray-700 font-medium"
                   >
-                    rajasekaran@infantengineers.in
+                    planthead@unicornpdy.in
                   </a>
                 </div>
               </div>
